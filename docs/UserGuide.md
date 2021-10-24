@@ -67,7 +67,7 @@ e.g. if the command specifies `help 123`, it will be interpreted as `help`.
 
 Shows a message explaining how to access the help page.
 
-![help message](images/helpMessage.png)
+![help message](images/helpWindow.png)
 
 Format: `help`
 
