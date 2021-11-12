@@ -158,15 +158,15 @@ edit -s INDEX_NUMBER [sn/STUDENT_NAME] [sp/STUDENT_PHONE] [pn/PARENT_NAME] [pp/P
 add -sl s/STUDENT_INDEX... n/LESSON_INDEX...
 ```
 
-* Words in `UPPER_CASE` are the parameters that you need to supply.
-* Parameters in square brackets are optional for you to provide.
-* Parameters can be in any order. 
-  e.g. `add -sl s/STUDENT_INDEX... n/LESSON_INDEX...` is the same as `add -sl n/LESSON_INDEX... s/STUDENT_INDEX...`
-* If a parameter is expected only once in the command but you specify it multiple times, only the last occurrence of the parameter will be taken.
-* `...` signals that multiple arguments can be supplied to this parameter, with each argument being separated by a space (` `). At least 1 argument must be provided for such parameters.
-  e.g. If the format of a command has `s/STUDENT_INDEX...` then both `s/1 2 3` and `s/1` are acceptable inputs, but not `s/ `.
-* If you include extraneous parameters for commands that do not take in parameters, TutorAid will simply ignore the parameters.
-  e.g. If you key in `help 123`, TutorAid will interpret it as just `help` as this command does not take in any parameters.
+| Syntax | Meaning | Example |
+| ------ | ------- | ------- |
+| Words in `UPPER_CASE` | You need to supply arguments for these parameters. | In the `edit -s` command above, it is compulsory to pass in an argument for `INDEX_NUMBER`.  |     
+| Parameters in square brackets | It is optional for you to supply arguments for these parameters. | In the `edit -s` command above, you do **not** need to pass in an argument for `STUDENT_NAME` if you do not intend to change it. |
+| `...` | You can supply multiple arguments for this parameter, separating each argument with a space. At least 1 argument must be provided for such parameters. | If the format of a command has `s/STUDENT_INDEX...` then both `s/1 2 3` and `s/1` are acceptable inputs, but not `s/ `. |
+| You can supply the parameters for all commands in any order. | - | `add -s sn/John Doe sp/92635282` is the same as `add -s sp/92635282 sn/John Doe`. |
+| If a parameter is expected only once in the command but you specify it multiple times, only the last occurrence of the parameter will be taken. | - | If you key in `add -s sn/John Doe sp/92635282 sp/81352846`, TutorAid will simply interpret as `add -s sn/John Doe sp/81352846`. |
+| If you include extraneous parameters for commands that do not take in parameters, TutorAid will simply ignore the parameters. | - | If you key in `help 123`, TutorAid will interpret it as just `help` as this command does not take in any parameters. |
+
 
 ***
 
